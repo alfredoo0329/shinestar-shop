@@ -1,0 +1,60 @@
+.card {
+    font-family: 'Poppins', serif;
+    background-color: white;
+    max-width: 280px;
+    margin: auto;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, .50) 0px 5px 12px;
+    border-radius: 12px;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.product-info {
+    width: 70%;
+    float: left;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+.product-info > * {
+    margin: 0;
+    line-height: 1.3em;
+}
+
+.product-info > h3 {
+    font-weight: 600;
+}
+
+.product-info > div * {
+    display: inline-block;
+    width: fit-content;
+    margin: 0;
+    font-weight: 400;
+}
+
+.actions {
+    width: 30%;
+    float: right;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: mediumvioletred;
+    color: white;
+    font-size: 20px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: none;
+    float: right;
+}
+
+button * {
+    position: relative;
+    left: -1px;
+    top: 1px;
+}
