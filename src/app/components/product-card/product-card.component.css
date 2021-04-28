@@ -1,60 +1,72 @@
 .card {
-    font-family: 'Poppins', serif;
-    background-color: white;
-    max-width: 280px;
-    margin: auto;
-    display: inline-block;
-    box-shadow: rgba(0, 0, 0, .50) 0px 5px 12px;
-    border-radius: 12px;
+    padding: 12px;
+    max-width: 240px;
+    font-family: "Poppins";
+    border-radius: 5px;
 }
 
-img {
-    width: 100%;
-    border-radius: 12px 12px 0px 0px;
+.card-content {
+    color: dimgray;
+    padding: 12px 6px;
+    padding-bottom: 0;
 }
 
-.product-info {
-    width: 70%;
-    float: left;
-    padding: 8px 16px;
-    box-sizing: border-box;
-}
-
-.product-info > * {
-    margin: 0;
-    line-height: 1.3em;
-}
-
-.product-info > h3 {
-    font-weight: 600;
-}
-
-.product-info > div * {
-    display: inline-block;
-    width: fit-content;
-    margin: 0;
+#title {
+    font-size: 16px;
     font-weight: 400;
 }
 
-.actions {
-    width: 30%;
-    float: right;
-    padding: 8px 16px;
+.row {
+    margin-bottom: 2px;
+}
+
+#price_data {
     box-sizing: border-box;
+    margin: 5px 0px;
 }
 
-button {
-    background-color: mediumvioletred;
-    color: white;
-    font-size: 20px;
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    border: none;
+#price, #price_dec {
     float: right;
+    line-height: 24px;
+    box-sizing: content-box;
 }
 
-button * {
-    position: relative;
-    left: -1px;
-    top: 1px;
+#price {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#price_dec {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#score {
+    font-size: 8px;
+    color: rgb(245, 186, 26);
+}
+
+.btn {
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 500;
+    background-color: #707FCD;
+    margin-left: -11px;
+    scale: .8;
+    float: left;
+}
+
+.i-actions * {
+    font-size: 22px;
+    float: right;
+    margin: 4px 0px;
+}
+
+#heart {
+    color: #D78EBA;
+}
+
+#share {
+    color: #558EB2;
 }
