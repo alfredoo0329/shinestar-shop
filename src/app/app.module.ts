@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { TestViewComponent } from './components/test-view/test-view.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestViewComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
