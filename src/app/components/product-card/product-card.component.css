@@ -1,74 +1,129 @@
+* {
+    width: auto;
+}
+
+.product {
+    transition-timing-function: ease-in; 
+    transition-duration: .2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    transition-timing-function: ease-out; 
+    transition-duration: .2s;
+}
+
+.sale {
+    font-size: .6em;
+    background-color: #83A2DC;
+    color: white;
+    width: 60px;
+    text-align: center;
+    margin-left: 20px;
+    padding: .6em 0;
+    border-radius: 11px 11px 0 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
 .card {
-    padding: 12px;
-    max-width: 240px;
-    font-family: "Poppins";
-    border-radius: 5px;
+    padding: 1em;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: rgba(41, 60, 86, .16) 3px 3px 12px;
+    width: 220px;
+    color: #293C56; 
 }
 
-.card-content {
-    color: dimgray;
-    padding: 12px 6px;
-    padding-bottom: 0;
-}
-
-#title {
-    font-size: 16px;
-    font-weight: 400;
+.card img {
+    width: 100%;
 }
 
 .row {
-    margin-bottom: 2px;
+    width: 95%;
+    margin-left: 2.5%;
+    display: flex;
+    justify-content: space-between;
 }
 
-#price_data {
-    box-sizing: border-box;
-    margin: 5px 0px;
+h4, h6 {
+    display: inline-block;
+    width: auto;
 }
 
-#price, #price_dec {
-    float: right;
-    line-height: 24px;
-    box-sizing: content-box;
+h4 {
+    font-size: 1.2em;
+    margin-top: .8em;
+    margin-bottom: .1em;
 }
 
-#price {
-    font-size: 24px;
+h4 span {
+    font-size: .8em;
+}
+
+h6 {
+    font-size: .8em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+div h6:nth-of-type(1) {
+    font-size: .7em;
+    color: #F08020;
+}
+
+div h6 fa-icon {
+    margin-right: .3em;
+}
+
+div h6:nth-of-type(2) {
+    text-decoration: line-through;
+    min-width: 40px;
+    text-align: center;
+    color: #C4C4C4;
+    text-decoration-thickness: 2px;
+}
+
+button {
+    width: 47.5%;
+    text-transform: uppercase;
+    font-size: .6em;
+    padding: .5em;
+    border: solid 2px;
+    border-radius: 8px;
     font-weight: 600;
-    padding-top: 10px;
-    box-sizing: border-box;
+    letter-spacing: .1em;
+    transition-timing-function: ease-in; 
+    transition-duration: .3s;
 }
 
-#price_dec {
-    font-size: 16px;
-    font-weight: 500;
+button:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-out; 
+    transition-duration: .3s;
 }
 
-#score {
-    font-size: 8px;
-    color: rgb(245, 186, 26);
+#buy {
+    border-color: #F895C9;
+    background-color: #F895C9;
+    color: white;
 }
 
-.btn {
-    border-radius: 15px;
-    font-size: 14px;
-    font-family: "Poppins";
-    font-weight: 500;
-    background-color: #707FCD;
-    margin-left: -11px;
-    scale: .8;
-    float: left;
+#buy:hover {
+    border-color: #F895C9;
+    background-color: white;
+    color: #F895C9;
 }
 
-.i-actions * {
-    font-size: 22px;
-    float: right;
-    margin: 4px 0px;
+#add {
+    border-color: #85E1E5;
+    background-color: white;
+    color: #85E1E5;
 }
 
-#heart {
-    color: #D78EBA;
-}
-
-#share {
-    color: #558EB2;
+#add:hover {
+    border-color: #85E1E5;
+    background-color: #85E1E5;
+    color: white;
 }

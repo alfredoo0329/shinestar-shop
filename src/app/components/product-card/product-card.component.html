@@ -1,44 +1,18 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:500">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600">
-
-<div class="card z-depth-3">
-    <div class="card-image">
+<div class="product">
+    <div class="sale">sale</div>
+    <div class="card">
         <img src="../../../assets/Captura de Pantalla 2021-04-26 a la(s) 11.58.12.png" alt="">
-    </div>
-    <div class="card-content">
-        <div class="col">
-            <div class="row">
-                <div class="col s7">
-                    <p id="title">UGH! T-Shirt</p>
-                    <p id="score">
-                        <fa-icon [icon]="faStar"></fa-icon>&nbsp;
-                        <fa-icon [icon]="faStar"></fa-icon>&nbsp;
-                        <fa-icon [icon]="faStar"></fa-icon>&nbsp;
-                        <fa-icon [icon]="faStar"></fa-icon>&nbsp;
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </p>
-                </div>
-                <div id="price_data" class="col s5">
-                    <p id="price_dec">.00</p>
-                    <p id="price">260</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s7">
-                    <button class="btn waves-effect waves-light z-depth-0" type="submit" name="action">
-                        <fa-icon [icon]="faCartPlus"></fa-icon>&nbsp;&nbsp;Add
-                    </button>
-                </div>
-                <div class="col s5 i-actions">
-                    <fa-icon id="share" [icon]="faShare"></fa-icon>
-                    <div style="width: 16px; height: 100%;">&nbsp;</div>
-                    <fa-icon id="heart" [icon]="faHeart"></fa-icon>
-                </div>
-            </div>
+        <div class="row">
+            <h4>UGH! T-Shrit</h4>
+            <h4>$200<span>.00</span></h4>
+        </div>
+        <div class="row">
+            <h6><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon></h6>
+            <h6>&nbsp;&nbsp;$360.00&nbsp;&nbsp;</h6>
+        </div>
+        <div class="row">
+            <button id="buy"><fa-icon [icon]="faMoneyBill"></fa-icon>&nbsp;comprar</button>
+            <button id="add"><fa-icon [icon]="faCartPlus"></fa-icon>&nbsp;agregar</button>
         </div>
     </div>
 </div>
