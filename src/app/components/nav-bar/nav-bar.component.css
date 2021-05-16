@@ -1,0 +1,130 @@
+.container {
+    padding: .8em 1.8em;
+}
+
+header {
+    margin: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    font-size: .8em;
+    text-transform: uppercase;
+    font-weight: 400;
+    z-index: 5;
+}
+
+img {
+    width: 130px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+header > a > fa-icon {
+    margin-top: 5px;
+}
+
+nav a fa-icon {
+    color: #F895C9;
+}
+
+nav a:nth-child(2) fa-icon {
+    margin-right: 1em;
+}
+
+ul {
+    position: fixed;
+    top: 4.6em;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    margin:0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+}
+
+ul > li > a {
+    border-top: 3px white solid;
+    color: #697688;
+    padding: .8em 1em;
+    border-bottom: 3px white solid;
+    border-radius: 2px;
+}
+
+ul > li > a:hover {
+    border-bottom-color: #F895C9;
+    color: #F895C9;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+fa-icon {
+    font-size: 1.3em;
+    color: #697688;
+    display: block;
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 750px) {
+    .show-desktop {
+        display: block;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    nav {
+        height: auto;
+    }
+
+    nav ul {
+        position: inherit;
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+
+    nav ul li {
+        margin-left: 1em;
+    }
+
+    nav ul li div a {
+        padding-top: 5px;
+    }
+
+    .outline-pink {
+        color: #F895C9;
+        border: solid #F895C9 2px;
+        border-radius: 15px;
+        padding: .8em 1em;
+    }
+
+    .outline-pink:hover {
+        background-color: #F895C9;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    .container {
+        padding: .8em 10%;
+    }
+}
+
+.filler {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}

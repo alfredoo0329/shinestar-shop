@@ -8,6 +8,7 @@ import { TestViewComponent } from './components/test-view/test-view.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './components/header/header.component';
     TestViewComponent,
     ProductCardComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

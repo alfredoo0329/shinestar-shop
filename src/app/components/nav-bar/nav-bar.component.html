@@ -1,0 +1,18 @@
+<header class="container">
+    <a href="#" class="hide-desktop" (click)="showMenu()"><fa-icon [icon]="faBars" class="menu"></fa-icon></a>
+
+    <a href="#"><img src="../../../assets/unnamed.png" alt=""></a>
+    <nav>
+        <ul id="menu" class="show-desktop hide-mobile">
+            <li><a href="" >inicio</a></li>
+            <li><a href="">nosotros</a></li>
+            <li><a href="">contacto</a></li>
+            <li><a href="">faq</a></li>
+            <li class="show-desktop hide-mobile"><div class="outline-pink">ingresar</div></li>
+            <li class="show-desktop hide-mobile"><div><a href="#"><fa-icon [icon]="faCartArrowDown"></fa-icon></a></div></li>
+        </ul>
+        <a href="#" class="hide-desktop"><fa-icon [icon]="faSignInAlt"></fa-icon></a>
+        <a href="#" class="hide-desktop"><fa-icon [icon]="faCartArrowDown"></fa-icon></a>
+    </nav>
+</header>
+<div id="menuFiller" class="filler hide-desktop hide-mobile" (click)="showMenu()"></div>
