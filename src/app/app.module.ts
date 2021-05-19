@@ -7,7 +7,6 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { TestViewComponent } from './components/test-view/test-view.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
@@ -17,7 +16,6 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     TestViewComponent,
     ProductCardComponent,
     FooterComponent,
-    HeaderComponent,
     NavBarComponent,
     HomePageComponent
   ],

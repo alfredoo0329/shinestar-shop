@@ -1,0 +1,42 @@
+.container {
+    padding: 1.5em 1.8em;
+}
+
+footer {
+    margin-top: 1em;
+    background-color: #293C56;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#star {
+    transform: rotate(60deg);
+}
+
+div > fa-icon {
+    margin-top: -.15em;
+    font-size: 1.3em;
+}
+
+@media only screen and (min-width: 1020px) {
+    .container {
+        padding: 1.5em 10%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    footer {
+        flex-direction: row;
+    }
+    
+    div {
+        display: inline-flex;
+    }
+
+    #space {
+        display: none;
+    }
+}

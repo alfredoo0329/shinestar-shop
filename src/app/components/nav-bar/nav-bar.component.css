@@ -1,18 +1,27 @@
+/*--------- HEADER ------------------------------*/
+
 .container {
     padding: .8em 1.8em;
 }
 
 header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     margin: 0;
     background-color: white;
     display: flex;
     justify-content: space-between;
-    height: 3em;
     font-size: .8em;
     text-transform: uppercase;
     font-weight: 400;
     z-index: 5;
+    margin-bottom: 1em;
 }
+
+/*--------- GENERAL ELEMENTS ------------------------------*/
 
 img {
     width: 130px;
@@ -25,7 +34,16 @@ ul {
 a {
     display: inline-block;
     text-decoration: none;
+    transition-timing-function: ease-in; 
+    transition-duration: .3s;
 }
+
+a:hover {
+    transition-timing-function: ease-out; 
+    transition-duration: .3s;
+}
+
+/*--------- ICONS ------------------------------*/
 
 header > a > fa-icon {
     margin-top: 5px;
@@ -39,6 +57,15 @@ nav a:nth-child(2) fa-icon {
     margin-right: 1em;
 }
 
+fa-icon {
+    font-size: 1.3em;
+    color: #697688;
+    display: block;
+    margin-top: 5px;
+}
+
+/*--------- NAV LIST ------------------------------*/
+
 ul {
     position: fixed;
     top: 4.6em;
@@ -46,7 +73,7 @@ ul {
     width: 100%;
     z-index: 4;
     margin:0;
-    padding: 0;
+    padding: 1em;
     background-color: white;
     text-align: center;
 }
@@ -66,13 +93,6 @@ ul > li > a:hover {
 
 .hide-mobile {
     display: none;
-}
-
-fa-icon {
-    font-size: 1.3em;
-    color: #697688;
-    display: block;
-    margin-top: 5px;
 }
 
 @media only screen and (min-width: 750px) {

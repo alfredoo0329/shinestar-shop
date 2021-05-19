@@ -1,3 +1,35 @@
-<section>
-    <product-card></product-card>
+<div class="background-circles">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+</div>
+<section class="container">
+    <div class="content">
+        <img src="../../../assets/landpageImage.png" alt="">
+        <div>
+            <h1>anime <span>&</span> kpop<span>.</span></h1>
+            <h3>Obten los mejores productos de tus personajes y artistas favoritos en un solo lugar</h3>
+            <div class="buttons">
+                <button id="registrar">registrate</button>
+                <button id="catalogo">catálogo</button>
+            </div>
+            <div (click)="scrollDown()"><fa-icon [icon]="faArrowDown" id="down" class="hide-mobile show-desktop"></fa-icon></div>
+        </div>
+    </div>
+    <div (click)="scrollDown()" class="hide-desktop">&nbsp;<fa-icon [icon]="faArrowDown" id="down"></fa-icon>&nbsp;</div>
 </section>
+<div id="promociones">
+    <h2>Promociones<span>.</span></h2>
+    <div class="row">
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+    </div>
+    <button id="vermas">ver más</button>
+</div>
