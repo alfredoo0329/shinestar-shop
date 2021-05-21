@@ -94,33 +94,6 @@ h3 {
     font-size: 1em;
 }
 
-/*--------- BUTTONS GENERAL ------------------------------*/
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-button {
-    text-transform: uppercase;
-    font-size: 1em;
-    padding: .5em 1em;
-    width: 200px;
-    margin-right: 1em;
-    border: solid 3.5px;
-    border-radius: 16px;
-    font-weight: 700;
-    transition-timing-function: ease-in; 
-    transition-duration: .3s;
-}
-
-button:hover {
-    transform: scale(1.1);
-    transition-timing-function: ease-out; 
-    transition-duration: .3s;
-}
-
 /*--------- REGISTER BUTTON ------------------------------*/
 
 #registrar {

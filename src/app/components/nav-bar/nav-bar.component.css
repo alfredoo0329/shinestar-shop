@@ -12,8 +12,6 @@ header {
     width: 100%;
     margin: 0;
     background-color: white;
-    display: flex;
-    justify-content: space-between;
     font-size: .8em;
     text-transform: uppercase;
     font-weight: 400;
@@ -25,10 +23,17 @@ header {
 
 img {
     width: 130px;
+    height: 37.73px;
 }
 
 ul {
     list-style: none;
+}
+
+header, nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a {
@@ -38,16 +43,34 @@ a {
     transition-duration: .3s;
 }
 
+#logoA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a:hover {
     transition-timing-function: ease-out; 
     transition-duration: .3s;
 }
 
-/*--------- ICONS ------------------------------*/
+/*--------- BUTTON ------------------------------*/
 
-header > a > fa-icon {
-    margin-top: 5px;
+#signin {
+    width: fit-content;
+    border: solid 2px #F895C9;
+    color: #F895C9;
+    font-weight: 500;
+    background-color: white;
 }
+
+#signin:hover {
+    border: solid 2px #F895C9;
+    color: white;
+    background-color: #F895C9;
+}
+
+/*--------- ICONS ------------------------------*/
 
 nav a fa-icon {
     color: #F895C9;
@@ -61,7 +84,6 @@ fa-icon {
     font-size: 1.3em;
     color: #697688;
     display: block;
-    margin-top: 5px;
 }
 
 /*--------- NAV LIST ------------------------------*/
@@ -96,6 +118,12 @@ ul > li > a:hover {
 }
 
 @media only screen and (min-width: 750px) {
+    ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .show-desktop {
         display: block;
     }

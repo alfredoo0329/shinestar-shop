@@ -17,6 +17,8 @@ export class NavBarComponent implements OnInit {
   faSignInAlt = faSignInAlt;
   faBars = faBars;
 
+  showCart: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,4 +39,7 @@ export class NavBarComponent implements OnInit {
 
   }
 
+  displayCart(): void {
+    this.showCart = !this.showCart;
+  }
 }
