@@ -1,0 +1,42 @@
+<div class="background-circles">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+</div>
+<div class="container">
+    <div>
+        <h1>Catálogo<span>.</span></h1>
+        <a (click)="showFilters()" class="hide-desktop"><fa-icon id="filterButton" [icon]="faFilter"></fa-icon></a>
+    </div>
+    <div id="searchDiv" class="hide-mobile show-desktop">
+        <input type="text" name="" id="" placeholder="Buscar...">
+        <a (click)="showFilters()" id="search"><fa-icon [icon]="faSearch"></fa-icon></a>
+    </div>
+    <select name="" id="filterBy" class="hide-mobile show-desktop">
+        <option value="">General</option>
+        <option value="">Ropa</option>
+        <option value="">Fotos</option>
+        <option value="">Ilustraciones</option>
+        <option value="">Pines</option>
+    </select>
+    <select name="" id="orderBy" class="hide-mobile show-desktop">
+        <option value="">Ordenar Por</option>
+        <option value="">Nombre</option>
+        <option value="">Precio</option>
+        <option value="">Valoración</option>
+    </select>
+</div>
+<div class="products">
+    <div class="row">
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+        <div class="col"><product-card></product-card></div>
+    </div>
+</div>
+

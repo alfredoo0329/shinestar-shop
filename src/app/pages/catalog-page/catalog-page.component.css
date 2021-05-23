@@ -1,0 +1,259 @@
+.container {    
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 5em;
+    padding-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+}
+
+/*--------- BACKGROUND ------------------------------*/
+
+.background-circles {
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 15vh;
+    left: -30vh;
+    background: #D6F0F1;
+    width: 45vh;
+    height: 45vh;
+}
+
+.circle2 {
+    top: 5vh;
+    left: 15vw;
+    background: #EBDEB0;
+    width: 10vh;
+    height: 10vh;
+}
+
+.circle3 {
+    top: 6vh;
+    right: -7vh;
+    background: #C1D0ED;
+    width: 15vh;
+    height: 15vh;
+}
+
+.circle4 {
+    bottom: -10vh;
+    right: -15vh;
+    background: #FADCEC;
+    width: 30vh;
+    height: 30vh;
+}
+
+/*--------- TITULO ------------------------------*/
+
+.container div {
+    z-index: 3;
+    padding: 0 1em;
+}
+
+h1 {
+    color: #293C56;
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+h1 span {
+    color: #85E1E5;
+}
+
+div #filterButton:hover {
+    cursor: pointer;
+}
+
+/*--------- SEARCH ------------------------------*/
+
+.container div:nth-child(2) {
+    position: relative;
+}
+
+input {
+    color: #697688;
+    border-color: #697688;
+    font-weight: 400;
+}
+
+#searchDiv {
+    position: relative;
+    padding: 0;
+}
+
+#search {
+    color: #697688;
+    position: absolute;
+    padding: 8px 16px;
+    font-size: 1.3em;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#search:hover {
+    transform: scale(1.2) translateY(-45%);
+    cursor: pointer;
+}
+
+/*--------- FILTROS ------------------------------*/
+
+#filterBy {
+    color: white;
+    background-color: #F895C9;
+    border-color: #F895C9;
+}
+
+#filterBy:focus {
+    color: #F895C9;
+    background-color: white;
+    border-color: #F895C9;
+}
+
+#orderBy {
+    color: white;
+    background-color: #85E1E5;
+    border-color: #85E1E5;
+}
+
+#orderBy:focus {
+    color: #85E1E5;
+    background-color: white;
+    border-color: #85E1E5;
+}
+
+.hide-mobile {
+    display: none !important;
+}
+
+/*--------- LISTA DE PRODUCTOS ------------------------------*/
+
+.products {
+    width: 100%;
+    margin-top: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 570px) {
+    .row {
+        max-width: 600px;
+    }
+
+    .col {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 880px) {
+    .row {
+        max-width: 900px;
+    }
+
+    .col {
+        width: 33%;
+    }
+
+    .container {
+        padding-top: 6em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .show-desktop {
+        display: block !important;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .products {
+        margin-top: 20vh;
+    }
+
+    select, #searchDiv {
+        align-self: flex-start;
+        max-width: 250px;
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .row {
+        max-width: 1200px;
+    }
+
+    .col {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1480px) {
+    .row {
+        max-width: 1500px;
+    }
+
+    .col {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 1780px) {
+    .row {
+        max-width: 1800px;
+    }
+
+    .col {
+        width: 16.6%;
+    }
+}

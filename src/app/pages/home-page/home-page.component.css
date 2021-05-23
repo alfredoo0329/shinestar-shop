@@ -94,6 +94,20 @@ h3 {
     font-size: 1em;
 }
 
+h2 {
+    text-align: center;
+    line-height: 1em;
+    color: #293C56;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+h2 span {
+    color: #85E1E5;
+}
+
 /*--------- REGISTER BUTTON ------------------------------*/
 
 #registrar {
@@ -160,20 +174,6 @@ a {
     align-items: center;
 }
 
-#promociones h2 {
-    text-align: center;
-    line-height: 1em;
-    color: #293C56;
-    margin-top: 0;
-    margin-bottom: 1.5em;
-    font-size: 2em;
-    font-weight: 800;
-}
-
-#promociones h2 span {
-    color: #85E1E5;
-}
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -188,10 +188,6 @@ a {
     justify-content: center;
     justify-items: center;
     align-items: center;
-}
-
-product-card {
-    box-sizing: border-box;
 }
 
 div .product {

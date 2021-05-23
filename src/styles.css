@@ -34,3 +34,22 @@ button:hover {
     transition-timing-function: ease-out; 
     transition-duration: .3s;
 }
+
+select, input {
+    position: relative;
+    width: 100%;
+    margin: .5em 0;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: .5em;
+    border-radius: 16px;
+    font-weight: 500;
+    border: solid 2px black;
+    text-transform: uppercase;
+    z-index: 2;
+    /*transform: translateY(-50px);*/
+}
+
+select:focus, input:focus {
+    outline: none;
+}

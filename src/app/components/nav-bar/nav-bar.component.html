@@ -1,17 +1,17 @@
 <header class="container">
-    <a href="#" class="hide-desktop" (click)="showMenu()"><fa-icon [icon]="faBars" class="menu"></fa-icon></a>
+    <a class="hide-desktop" (click)="showMenu()"><fa-icon [icon]="faBars" class="menu"></fa-icon></a>
 
-    <a id="logoA" href="#"><img src="../../../assets/logo.png" alt=""></a>
+    <a id="logoA"><img src="../../../assets/logo.png" alt=""></a>
     <nav>
         <ul id="menu" class="show-desktop hide-mobile">
-            <li><a href="" >inicio</a></li>
-            <li><a href="">nosotros</a></li>
-            <li><a href="">contacto</a></li>
-            <li><a href="">faq</a></li>
+            <li><a routerLinkActive="active" routerLink="catalogo">inicio</a></li>
+            <li><a routerLinkActive="active" routerLink="about">nosotros</a></li>
+            <li><a routerLinkActive="active" routerLink="contact">contacto</a></li>
+            <li><a routerLinkActive="active" routerLink="faq">faq</a></li>
             <li class="show-desktop hide-mobile"><button id="signin">ingresar</button></li>
-            <li (click)="displayCart()" class="show-desktop hide-mobile"><div><a href="#"><fa-icon [icon]="faCartArrowDown"></fa-icon></a></div></li>
+            <li (click)="displayCart()" class="show-desktop hide-mobile"><div><a><fa-icon [icon]="faCartArrowDown"></fa-icon></a></div></li>
         </ul>
-        <a href="#" class="hide-desktop"><fa-icon [icon]="faSignInAlt"></fa-icon></a>
+        <a class="hide-desktop"><fa-icon [icon]="faSignInAlt"></fa-icon></a>
         <a (click)="displayCart()" class="hide-desktop"><fa-icon [icon]="faCartArrowDown"></fa-icon></a>
     </nav>
 </header>

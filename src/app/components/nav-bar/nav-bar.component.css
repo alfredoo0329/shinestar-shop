@@ -90,7 +90,7 @@ fa-icon {
 
 ul {
     position: fixed;
-    top: 4.6em;
+    top: 4.5em;
     left: 0;
     width: 100%;
     z-index: 4;
@@ -111,6 +111,11 @@ ul > li > a {
 ul > li > a:hover {
     border-bottom-color: #F895C9;
     color: #F895C9;
+}
+
+.active {
+    border-bottom-color: #F895C9 !important;
+    color: #F895C9 !important;
 }
 
 .hide-mobile {
