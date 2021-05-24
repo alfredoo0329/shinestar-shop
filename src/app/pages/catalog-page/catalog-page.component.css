@@ -156,7 +156,58 @@ input {
     display: none !important;
 }
 
-@media only screen and (min-width: 880px) {
+.products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 610px) {
+    .row {
+        width: 600px;
+    }
+
+    .col {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .products {
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .products {
+        padding-top: 200px;
+    }
+
+    .row {
+        width: 900px;
+    }
+
+    .col {
+        width: 33%;
+    }
 
     .container {
         padding-top: 6em;
@@ -173,10 +224,6 @@ input {
         display: none;
     }
 
-    .products {
-        margin-top: 20vh;
-    }
-
     select, #searchDiv {
         align-self: flex-start;
         max-width: 250px;
@@ -184,3 +231,32 @@ input {
     }
 }
 
+@media only screen and (min-width: 1220px) {
+    .row {
+        width: 1200px;
+    }
+
+    .col {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1520px) {
+    .row {
+        width: 1500px;
+    }
+
+    .col {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 1820px) {
+    .row {
+        width: 1800px;
+    }
+
+    .col {
+        width: 16.6%;
+    }
+}

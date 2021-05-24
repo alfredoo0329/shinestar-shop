@@ -1,14 +1,18 @@
 <div class="product">
-    <div class="sale">sale</div>
+    <div class="row">
+        <div class="sale" [style.display]="product.discount > 0 && product.stock > 0 ? 'block' : 'none'">sale</div>
+        <div class="out" [style.opacity]="product.stock == 0 ? 1 : 0">out</div>
+    </div>
     <div class="card">
-        <img src="../../../assets/Captura de Pantalla 2021-04-26 a la(s) 11.58.12.png" alt="">
+        <img src="assets/images/{{product.images[0]}}" alt="">
+        <div class="row"> <h4>{{product.title}}</h4></div>
         <div class="row">
-            <h4>UGH! T-Shrit</h4>
-            <h4>$200<span>.00</span></h4>
+            <h4 id="stars"><fa-icon [icon]="faStar" *ngFor="let icon of Arr(product.stars)"></fa-icon></h4>
+            <h4 id="price">${{Math.ceil(product.price - product.price * product.discount)}}<span>.00</span>
+            </h4>
         </div>
         <div class="row">
-            <h6><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon><fa-icon [icon]="faStar"></fa-icon></h6>
-            <h6>&nbsp;&nbsp;$360.00&nbsp;&nbsp;</h6>
+            <h6 id="priceBefore" [style.opacity]="product.discount > 0 && product.stock > 0 ? 1 : 0">&nbsp;&nbsp;${{product.price}}.00&nbsp;&nbsp;</h6>
         </div>
         <div class="row">
             <button id="buy"><fa-icon [icon]="faMoneyBill"></fa-icon>&nbsp;&nbsp;comprar</button>
