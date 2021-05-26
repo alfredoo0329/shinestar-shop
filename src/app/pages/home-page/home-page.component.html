@@ -22,14 +22,9 @@
 <div id="promociones">
     <h2>Promociones<span>.</span></h2>
     <div class="row">
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
-        <div class="col"><product-card></product-card></div>
+        <div class="col" *ngFor="let product of productService.promotions">
+            <product-card [product]="product"></product-card>
+        </div>
     </div>
     <button id="vermas">ver más</button>
 </div>

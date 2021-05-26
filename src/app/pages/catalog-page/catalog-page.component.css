@@ -1,4 +1,5 @@
 .container {    
+    padding-top: 80px;
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 1em;
@@ -162,7 +163,7 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 160px;
 }
 
 .row:after {
@@ -192,7 +193,7 @@ input {
 
 @media only screen and (min-width: 750px) {
     .products {
-        padding-top: 100px;
+        padding-top: 180px;
     }
 }
 

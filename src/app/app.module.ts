@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { FaqPageComponent } from './pages/faq-page/faq-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { ProductListCardComponent } from './components/product-list-card/product-list-card.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,16 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     AboutPageComponent,
     FaqPageComponent,
     ProductPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    CartPageComponent,
+    ProductListCardComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

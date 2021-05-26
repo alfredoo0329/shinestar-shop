@@ -1,0 +1,53 @@
+<div class="cart">
+    <div id="backgrounds">
+
+    </div>
+    <div class="sections">
+        <div id="cartList">
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+            <product-list-card></product-list-card>
+        </div>
+        <div class="rounderBorder"><div></div></div>
+        <section>
+            <a (click)="showDetails()" [style.transform]="show ? 'rotate(0deg)' : 'rotate(180deg)'" id="hideDetails"><fa-icon [icon]="faArrowDown"></fa-icon></a>
+            <div class="column" [style.display]="show ? 'flex' : 'none'">
+                <a routerLink="" id="goBack"><fa-icon [icon]="faArrowLeft"></fa-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Volver al Catálogo</a>
+                <h2>Verificar Carrito<span>.</span></h2>
+                <div class="row">
+                    <h4>Subtotal</h4>
+                    <h4>$150<span>.00</span></h4>
+                </div>
+                <div class="row">
+                    <h4>IVA 16%</h4>
+                    <h4>$30<span>.20</span></h4> 
+                </div>
+                <div class="row">
+                    <h4>Costo de Envio</h4>
+                    <h4>$20<span>.00</span></h4> 
+                </div>
+                <hr>
+                <div class="row">
+                    <h3>Total</h3>
+                    <h3>$206<span>.20</span></h3>
+                </div>
+            </div>
+            <button>Continuar</button>
+        </section>
+    </div>
+</div>

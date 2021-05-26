@@ -12,7 +12,6 @@ import { faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class ProductCardComponent implements OnInit {
-  apiGetImageUrl = "http://192.168.0.19:3000/api/products/images/";
   @Input('product') product: any;
   Arr = Array;
   Math = Math;

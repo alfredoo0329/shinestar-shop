@@ -6,6 +6,7 @@ import { FaqPageComponent } from './pages/faq-page/faq-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 const routes: Routes = [ 
   {path: '', component: HomePageComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'about', component: AboutPageComponent },
   {path: 'faq', component: FaqPageComponent },
   {path: 'product', component: ProductPageComponent },
-  {path: 'contact', component: ContactPageComponent }
+  {path: 'contact', component: ContactPageComponent },
+  {path: 'cart', component: CartPageComponent }
 ];
 
 @NgModule({

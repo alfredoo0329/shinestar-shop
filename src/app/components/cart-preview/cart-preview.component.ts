@@ -14,5 +14,8 @@ export class CartPreviewComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  showCart(): void {
+    this.show = !this.show;
+  }
 
 }
