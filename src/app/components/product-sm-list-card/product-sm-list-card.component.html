@@ -1,15 +1,44 @@
 <div class="card">
-    <a href="#" id="close"><fa-icon [icon]="faTimes"></fa-icon></a>
+    <a id="close" (click)="productService.removeFromCart(product, true)"><fa-icon [icon]="faTimes"></fa-icon></a>
     <div class="row">
-        <img src="../../../assets/Captura de Pantalla 2021-04-26 a la(s) 11.58.12.png" alt="">
+        <img src="assets/images/{{product.images[0]}}" alt="">
         <div class="column">
-            <h3>UGH! T-Shrit</h3>
+            <h3>{{product.title}}</h3>
             <div>
-                <h2>$200<span>.00</span></h2>
+                <h2>${{Math.ceil(product.price - product.price * product.discount)}}<span>.00</span></h2>
                 <div class="quantity">
-                    <button id="remove">-</button>
-                    <h4>2</h4>
-                    <button id="add">+</button>
+                    <button id="remove" (click)="productService.removeFromCart(product, false)">-</button>
+                    <h4>{{product.cart_quantity}}</h4>
+                    <button id="add" (click)="productService.addToCart(product)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column-1">
+        <div class="item-inputs" *ngIf="product.colors.length > 0">
+            Color
+            <div class="item-text" *ngFor="let color of product.colors; let i = index">
+                <div class="item-selector" 
+                    [style.border]="colorSelect == i ? 'solid 2px #F895C9' : 'solid 2px lightgray'" 
+                    (click)="selectColor(i)">
+                    <div class="selector" 
+                        [style.background-color]="color">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-inputs" *ngIf="product.sizes.length > 0">
+            Talla
+            <div class="item-text" *ngFor="let size of product.sizes; let i = index">
+                {{size}}
+                <div class="item-selector" 
+                    [style.border]="sizeSelect == i ? 'solid 2px #F895C9' : 'solid 2px lightgray'" 
+                    (click)="selectSize(i)">
+                    <div class="selector" 
+                        [style.background-color]="sizeSelect == i ? '#F895C9' : 'white'">
+                    &nbsp;
+                    </div>
                 </div>
             </div>
         </div>

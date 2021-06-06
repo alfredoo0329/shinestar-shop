@@ -11,8 +11,8 @@
             <h1>anime <span>&</span> kpop<span>.</span></h1>
             <h3>Obten los mejores productos de tus personajes y artistas favoritos en un solo lugar</h3>
             <div class="buttons">
-                <button id="registrar">registrate</button>
-                <button id="catalogo">catálogo</button>
+                <!--<button id="registrar">registrate</button>-->
+                <button id="catalogo" routerLink="catalogo">catálogo</button>
             </div>
             <div (click)="scrollDown()"><fa-icon [icon]="faArrowDown" id="down" class="hide-mobile show-desktop"></fa-icon></div>
         </div>
@@ -26,5 +26,5 @@
             <product-card [product]="product"></product-card>
         </div>
     </div>
-    <button id="vermas">ver más</button>
+    <button id="vermas" routerLink="catalogo">ver más</button>
 </div>

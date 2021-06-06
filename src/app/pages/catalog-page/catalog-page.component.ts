@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { ProductsService } from '../../services/products/products.service';
+import { NgForm } from '@angular/forms'
+import { Product } from 'src/app/Models/product';
 
 @Component({
   selector: 'catalog-page',
@@ -10,6 +12,9 @@ import { ProductsService } from '../../services/products/products.service';
 })
 
 export class CatalogPageComponent implements OnInit {
+  category: String = 'General';
+  search = '';
+
   constructor(public productService: ProductsService) {}
 
   ngOnInit(): void {
@@ -26,6 +31,14 @@ export class CatalogPageComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  showProduct(product: Product) : string {
+    let show = false;
+    show = (product.category == this.category || this.category == 'General');
+    if (this.search != '')
+      show = show && product.title.toLowerCase().includes(this.search.toLowerCase());
+    return show ? 'inline-flex' : 'none';
   }
 
   //STYLE VARIABLES AND METHODS

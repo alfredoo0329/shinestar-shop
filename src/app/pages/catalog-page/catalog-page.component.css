@@ -22,6 +22,7 @@
     justify-content: space-between;
     padding: 0;
     align-items: center;
+
 }
 
 /*--------- BACKGROUND ------------------------------*/
@@ -100,6 +101,10 @@ div #filterButton:hover {
     position: relative;
 }
 
+form {
+    width: 100%;
+}
+
 input {
     color: #697688;
     border-color: #697688;
@@ -109,17 +114,25 @@ input {
 #searchDiv {
     position: relative;
     padding: 0;
+    padding-right: 50px;
+    box-sizing: border-box;
 }
 
 #search {
-    color: #697688;
-    position: absolute;
-    padding: 8px 16px;
-    font-size: 1.3em;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 10;
+    color: #697688 !important;
+    position: absolute !important;
+    padding: 8px 16px !important;
+    width: fit-content !important;
+    margin: 0 !important;
+    text-align: right;
+    font-size: 1.3em !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+    background-color: transparent !important;
+    border: none !important;
 }
 
 #search:hover {
@@ -181,6 +194,12 @@ input {
     align-items: center;
 }
 
+@media only screen and (min-width: 600px) {
+    .container {
+        padding-top: 96px;
+    }
+}
+
 @media only screen and (min-width: 610px) {
     .row {
         width: 600px;
@@ -211,7 +230,6 @@ input {
     }
 
     .container {
-        padding-top: 6em;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;

@@ -11,4 +11,8 @@ export interface Product {
     description: string; 
     tags: string[]; 
     stock: number; 
+
+    cart_quantity: number;
+    color: number;
+    size: number;
 }

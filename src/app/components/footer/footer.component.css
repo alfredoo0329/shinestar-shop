@@ -2,6 +2,15 @@
     padding: 1.5em 1.8em;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:active, a:visited {
+    color: white;
+}
+
 footer {
     background-color: #293C56;
     color: white;

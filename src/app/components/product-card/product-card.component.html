@@ -15,8 +15,8 @@
             <h6 id="priceBefore" [style.opacity]="product.discount > 0 && product.stock > 0 ? 1 : 0">&nbsp;&nbsp;${{product.price}}.00&nbsp;&nbsp;</h6>
         </div>
         <div class="row">
-            <button id="buy"><fa-icon [icon]="faMoneyBill"></fa-icon>&nbsp;&nbsp;comprar</button>
-            <button id="add"><fa-icon [icon]="faCartPlus"></fa-icon>&nbsp;&nbsp;agregar</button>
+            <button id="buy" (click)="addToCart()" routerLink="../cart"><fa-icon [icon]="faMoneyBill"></fa-icon>&nbsp;&nbsp;comprar</button>
+            <button id="add" (click)="addToCart()"><fa-icon [icon]="faCartPlus"></fa-icon>&nbsp;&nbsp;agregar</button>
         </div>
     </div>
 </div>

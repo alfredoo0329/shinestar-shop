@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'cart-preview',
@@ -8,14 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CartPreviewComponent implements OnInit {
 
   @Input('show') show: boolean = false; 
+  Arr = Array;
+  Math = Math;
 
-  constructor() { }
+  constructor(public productsService: ProductsService) { }
 
-  ngOnInit(): void {
-  }
-  
+  ngOnInit(): void {}
+
   showCart(): void {
     this.show = !this.show;
   }
-
 }

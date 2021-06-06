@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { ProductsService } from "../../services/products/products.service"
 
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -16,9 +16,12 @@ export class ProductCardComponent implements OnInit {
   Arr = Array;
   Math = Math;
 
-  constructor(private http: HttpClient) {}
+  constructor(public productService: ProductsService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  addToCart() {
+    this.productService.addToCart(this.product);
   }
 
   //STYLE VARIABLES

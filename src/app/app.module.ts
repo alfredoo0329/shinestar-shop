@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
+import { ProductsService } from '../app/services/products/products.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +25,7 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { ProductListCardComponent } from './components/product-list-card/product-list-card.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -39,16 +43,20 @@ import { ProductListCardComponent } from './components/product-list-card/product
     ProductPageComponent,
     ContactPageComponent,
     CartPageComponent,
-    ProductListCardComponent
+    ProductListCardComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ProductsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -25,6 +25,7 @@
     display: flex;
     width: 100%;
     height: 100%;
+    background-color: #F9F9F9;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -34,8 +35,9 @@
 #cartList {
     margin-top: 80px;
     width: 100%;
-    background-color: #F9F9F9;
-    transform: translateX(16px);
+    box-sizing: border-box;
+    padding-left: 2em;
+    padding-right: 2em;
     overflow-y: scroll;
 }
 
@@ -152,6 +154,7 @@ hr {
 
 button {
     width: 100%;
+    max-width: 250px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
@@ -165,4 +168,59 @@ button {
 button:hover {
     background-color: white;
     color: #F895C9;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    #cartList {
+        margin-top: 110px;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    .show-desktop {
+        display: flex;
+    }
+
+    .cart {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: inherit;
+    }
+
+    .rounderBorder {
+        display: none;
+    }
+    
+    .sections {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #hideDetails {
+        display: none;
+    }
+
+    #cartList {
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    section {
+        width: 800px;
+        padding-top: 8em;
+    }
+
+    .column {
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+    
+    #section-content-1 {
+        flex-grow: 1;
+    }
+    
 }
