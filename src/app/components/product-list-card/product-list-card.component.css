@@ -24,6 +24,7 @@ a {
     top: 1em;
     right: 1em;
     color: #7F7F7F;
+    cursor: pointer;
 }
 
 .row-1 {
@@ -255,6 +256,22 @@ img {
 @media only screen and (min-width: 1000px) {
     .card {
         max-width: 1200px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .row-1 {
+        flex-direction: row;
+    }
+
+    .column-1 {
+        padding-top: 0;
+        padding-left: 2em;
     }
 }
 
@@ -280,6 +297,8 @@ img {
 @media only screen and (min-width: 1290px) {
     .card {
         align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .row-2 {

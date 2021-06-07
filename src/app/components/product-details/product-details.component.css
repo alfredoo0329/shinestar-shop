@@ -1,0 +1,254 @@
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(51, 60, 86, .5);
+    z-index: 27;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: #7F7F7F;
+    cursor: pointer;
+}
+
+.product {
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    z-index: 30;
+    padding: 0 0 1.2em;
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product > .row {
+    max-width: 350px;
+    justify-content: flex-start;
+}
+
+.sale {
+    font-size: .6em;
+    background-color: #83A2DC;
+    color: white;
+    width: 60px;
+    text-align: center;
+    margin-left: 20px;
+    padding: .4em 0;
+    border-radius: 11px 11px 0 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.out {
+    font-size: .6em;
+    background-color: #dc8383;
+    color: white;
+    width: 60px;
+    text-align: center;
+    margin-left: 20px;
+    padding: .4em 0;
+    border-radius: 11px 11px 0 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.card {
+
+    max-width: 350px;
+    position: relative;
+
+    padding: 28px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: rgba(41, 60, 86, .16) 3px 3px 12px;
+    color: #293C56; 
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1.5em;
+}
+
+.arrow {
+    font-size: 2em;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.column {
+    width: 100%;
+    min-width: 230px;
+    margin-left: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4, h6 {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-top: -5px;
+}
+
+h4 span {
+    font-size: .8em;
+}
+
+h6 {
+    font-size: .8em;
+}
+
+#price {
+    font-weight: 600;
+}
+
+#stars {
+    font-size: .7em;
+    color: #F08020;
+}
+
+#stars fa-icon {
+    margin-right: .5em;
+}
+
+/*------------ RADIO BUTTON -------------------*/
+.item-inputs {
+    width: 100%;
+    color: #293C56;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.item-text {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.item-selector {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-left: 6px;
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 2px;
+    justify-content: flex-start;
+    transition-timing-function: ease-out; 
+    transition-duration: .3s;
+}
+
+.selector {
+    width: 100%;
+    height: 100%;
+    border-radius: 500%;
+    background-color: #F895C9;
+}
+
+#priceBefore {
+    text-decoration: line-through;
+    min-width: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #C4C4C4;
+    text-decoration-thickness: 2px;
+    margin-top: -3px;
+}
+
+button {
+    width: 47.5%;
+    text-transform: uppercase;
+    font-size: .6em;
+    padding: .5em;
+    border: solid 2px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    transition-timing-function: ease-in; 
+    transition-duration: .3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-out; 
+    transition-duration: .3s;
+}
+
+#buy {
+    border-color: #F895C9;
+    background-color: #F895C9;
+    color: white;
+    margin: 0;
+    width: 48%;
+}
+
+#buy:hover {
+    border-color: #F895C9;
+    background-color: white;
+    color: #F895C9;
+}
+
+#add {
+    border-color: #85E1E5;
+    background-color: white;
+    color: #85E1E5;
+    margin: 0;
+    width: 48%;
+}
+
+#add:hover {
+    border-color: #85E1E5;
+    background-color: #85E1E5;
+    color: white;
+}

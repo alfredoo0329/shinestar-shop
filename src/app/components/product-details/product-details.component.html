@@ -1,1 +1,54 @@
-<p>product-details works!</p>
+<div class="background" *ngIf="show">
+</div>
+
+<div class="product">
+    <div class="row">
+        <div class="sale" [style.display]="product.discount > 0 && product.stock > 0 ? 'block' : 'none'">sale</div>
+        <div class="out" [style.opacity]="product.stock == 0 ? 1 : 0">out</div>
+    </div>
+    <div class="card">
+        <a id="close" (click)="hideDetails()"><fa-icon [icon]="faTimes"></fa-icon></a>
+        <div class="row" [style.justify-content]="product.images.length > 1 ? 'space-between' : 'center'">
+            <div *ngIf="product.images.length > 1" class="arrow" (click)="moveImagePos(-1)"><fa-icon [icon]="faCaretLeft"></fa-icon></div>
+            <img src="assets/images/{{product.images[imagePos]}}" alt="">
+            <div *ngIf="product.images.length > 1" class="arrow" (click)="moveImagePos(1)"><fa-icon [icon]="faCaretRight"></fa-icon></div>
+        </div>
+        <div class="row"> <h4>{{product.title}}</h4></div>
+        <div class="row">
+            <h4 id="stars"><fa-icon [icon]="faStar" *ngFor="let icon of Arr(product.stars)"></fa-icon></h4>
+            <h4 id="price">${{Math.ceil(product.price - product.price * product.discount)}}<span>.00</span>
+            </h4>
+        </div>
+        <div class="row" style="justify-content: flex-end;">
+            <h6 id="priceBefore" [style.opacity]="product.discount > 0 && product.stock > 0 ? 1 : 0">&nbsp;&nbsp;${{product.price}}.00&nbsp;&nbsp;</h6>
+        </div>
+        <div class="row">
+            <div class="item-inputs" *ngIf="product.colors.length > 0">
+                Color
+                <div class="item-text" *ngFor="let color of product.colors; let i = index">
+                    <div class="item-selector" >
+                        <div class="selector" 
+                            [style.background-color]="color">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item-inputs" *ngIf="product.sizes.length > 0">
+                Talla
+                <div class="item-text" *ngFor="let size of product.sizes; let i = index">
+                    {{size}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p>{{product.description}}</p>
+        </div>
+        <div class="row">
+            <button id="buy" (click)="addToCart()" routerLink="../cart"><fa-icon [icon]="faMoneyBill"></fa-icon>&nbsp;&nbsp;comprar</button>
+            <button id="add" (click)="addToCart()"><fa-icon [icon]="faCartPlus"></fa-icon>&nbsp;&nbsp;agregar</button>
+        </div>
+    </div>
+</div>

@@ -30,14 +30,35 @@
     justify-content: flex-start;
 }
 
+#section3 {
+    margin-top: 80px;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    color: #697688;
+    border-color: #697688;
+    font-weight: 400;
+}
+
+/*------------FORMS--------------------------------*/
+#textDiv {
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*------------ CART LIST  -------------------*/
 
 #cartList {
     margin-top: 80px;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 2em;
     overflow-y: scroll;
 }
 
@@ -58,6 +79,25 @@
     height: 2em;
     border-radius: 33px 33px 0 0;
     background-color: white;
+}
+
+.sectionImage {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
 }
 
 section {
@@ -86,10 +126,25 @@ section {
 }
 
 .row {
+    width: 100%;
     padding: .5em 1em;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+}
+
+h6 {
+    width: 100%;
+    font-size: 1em;
+    color: rgb(177, 177, 177);
+    margin-bottom: -.2em;
+    margin-top: .5em;
+    margin-left: .5em;
+    font-weight: 400;
+}
+
+.numero {
+    width: 70px;
 }
 
 /*------------ NAV BUTTONS -------------------*/
@@ -104,6 +159,7 @@ section {
     text-decoration: none;
     font-size: 1em;
     color: #85E1E5;
+    cursor: pointer;
 }
 
 #goBack fa-icon {
@@ -174,13 +230,7 @@ button:hover {
     display: none;
 }
 
-@media only screen and (min-width: 600px) {
-    #cartList {
-        margin-top: 110px;
-    }
-}
-
-@media only screen and (min-width: 1290px) {
+@media only screen and (min-width: 1000px) {
     .show-desktop {
         display: flex;
     }
@@ -197,7 +247,8 @@ button:hover {
     
     .sections {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between;    
+        min-width: 800px;
     }
 
     #hideDetails {

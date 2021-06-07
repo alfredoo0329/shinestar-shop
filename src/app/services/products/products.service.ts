@@ -11,24 +11,19 @@ export class ProductsService {
   readonly apiPromotionsUrl = "http://localhost:3000/api/products/promotions"
   products: Product[] | undefined;
   promotions: Product[] | undefined;
-  cart_products: Product[] = [];
+  
+  
+  cart_products: Product[] = []; // <----------------------------------------------- CARRITO
 
   constructor(private http: HttpClient) { 
-    this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
-  }
-
-  getProducts() {
-    return this.http.get<Product[]>(this.apiUrl);
-  }
-
-  getPromotions() {
-    return this.http.get<Product[]>(this.apiPromotionsUrl);
+    this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}'); // <------------------- OBTENGO EL CARRO DEL LOCALSTORAGE
   }
 
   getCartProducts() {
-    return JSON.parse(localStorage.getItem('cart') || '{}');
+    return JSON.parse(localStorage.getItem('cart') || '{}'); // <---------------------------------- OBTENGO EL CARRO DEL LOCALSTORAGE PARA EL UI
   }
 
+  // <----------------------------------------------- CON TODO ESTO CALCULO EL TOTAL SUBTOTAL Y EL IVA
   getCartSubTotal() {
     let subtotal = 0;
     this.cart_products.forEach((product) => {
@@ -37,41 +32,36 @@ export class ProductsService {
     return subtotal;
   }
 
-  getCartIVA() {
-    return this.getCartSubTotal() * 0.16;
-  }
+  getCartIVA() { return this.getCartSubTotal() * 0.16; }
 
-  getCartTotal() {
-    return this.getCartSubTotal() + this.getCartIVA() + 20;
-  }
+  getCartTotal() { return this.getCartSubTotal() + this.getCartIVA() + 20; }
 
+  // <----------------------------------------------- AQUI AGREGO LOS PRODUCTOS AL LOCAL STORAGE
   addToCart(product: Product) {
     product.cart_quantity = 1;
 
-    if (localStorage.getItem('cart') == null) {
+    if (localStorage.getItem('cart') == null) { // <------------------------------------- SI EL CARRO ESTA VACIO LO AGREGO DIRECTO
       this.cart_products?.push(product);
       localStorage.setItem('cart', JSON.stringify(this.cart_products));
-      //console.log(this.cart_products);
       return;
     }
 
-    const position = this.isDuplicated(product.id);
+    const position = this.isDuplicated(product.id); // <---------------------------------- SINO CHECO SI ESTA DUPLICADO
 
-    if (position != -1) {
+    if (position != -1) { // <----------------------------------------------- SI ENCUENTRO EL PRODUCTO SACO EL CARRITO, LE AGREGO UNO Y LO VUELVO A GUARDAR
       this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
       this.cart_products[position].cart_quantity++;
       localStorage.setItem('cart', JSON.stringify(this.cart_products));
-      //console.log(this.cart_products);
       return;
     }
 
+    // <----------------------------------------------- SI NO LO METO DIRECTO
     this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
     this.cart_products?.push(product);
     localStorage.setItem('cart', JSON.stringify(this.cart_products));
-    //console.log(this.cart_products);
-
   }
 
+  // <----------------------------------------------- CHECO SI EL PRODUCTO YA ESTA EN EL CARRO Y TRAIGO SU POSICION
   isDuplicated(id: number): number {
     let position = -1;
     this.cart_products?.forEach((product, i) => {
@@ -96,17 +86,16 @@ export class ProductsService {
       this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
       this.cart_products.splice(position, 1);
       localStorage.setItem('cart', JSON.stringify(this.cart_products));
-      //console.log(this.cart_products);
       return;
     }
 
     this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
     this.cart_products[position].cart_quantity--;
     localStorage.setItem('cart', JSON.stringify(this.cart_products));
-    //console.log(this.cart_products);
   }
 
-  changeColor(product: Product) {
+  // <----------------------------------------------- ESTOS SON SOLO PARA ACTUALIZAR EL COLOR Y TAMAÑO DE ROPA
+  changeColor(product: Product) { 
     if (localStorage.getItem('cart') == null) 
       return;
     
@@ -116,9 +105,8 @@ export class ProductsService {
       return;
     
     this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
-      this.cart_products[position].color = product.color;
-      localStorage.setItem('cart', JSON.stringify(this.cart_products));
-      //console.log(this.cart_products);
+    this.cart_products[position].color = product.color;
+    localStorage.setItem('cart', JSON.stringify(this.cart_products));
   }
 
   changeSize(product: Product) {
@@ -131,8 +119,16 @@ export class ProductsService {
       return;
     
     this.cart_products = JSON.parse(localStorage.getItem('cart') || '{}');
-      this.cart_products[position].size = product.size;
-      localStorage.setItem('cart', JSON.stringify(this.cart_products));
-      //console.log(this.cart_products);
+    this.cart_products[position].size = product.size;
+    localStorage.setItem('cart', JSON.stringify(this.cart_products));
   }
+
+  getProducts() {
+    return this.http.get<Product[]>(this.apiUrl);
+  }
+
+  getPromotions() {
+    return this.http.get<Product[]>(this.apiPromotionsUrl);
+  }
+
 }

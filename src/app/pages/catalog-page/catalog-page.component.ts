@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { ProductsService } from '../../services/products/products.service';
@@ -14,11 +14,22 @@ import { Product } from 'src/app/Models/product';
 export class CatalogPageComponent implements OnInit {
   category: String = 'General';
   search = '';
+  productSelected : any = null;
 
   constructor(public productService: ProductsService) {}
 
   ngOnInit(): void {
     this.getProducts();
+  }
+
+  doShowDetails(product: any) {
+    console.log(product);
+    this.productSelected = product;
+  }
+
+  setProduct(product: Product) {
+    this.productSelected = product;
+    console.log(this.productSelected);
   }
 
   getProducts() {

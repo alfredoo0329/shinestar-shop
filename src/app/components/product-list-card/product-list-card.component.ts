@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import * as EventEmitter from 'events';
 import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class ProductListCardComponent implements OnInit {
   Math = Math;
   colorSelect: number = 0;
   sizeSelect: number = 0;
-  
+
   constructor(public productService: ProductsService) { }
 
   ngOnInit(): void {

@@ -4,7 +4,7 @@
         <div class="out" [style.opacity]="product.stock == 0 ? 1 : 0">out</div>
     </div>
     <div class="card">
-        <img src="assets/images/{{product.images[0]}}" alt="">
+        <img src="assets/images/{{product.images[0]}}" alt="" (click)="showDetails()">
         <div class="row"> <h4>{{product.title}}</h4></div>
         <div class="row">
             <h4 id="stars"><fa-icon [icon]="faStar" *ngFor="let icon of Arr(product.stars)"></fa-icon></h4>
